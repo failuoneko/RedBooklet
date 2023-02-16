@@ -7,5 +7,9 @@ target 'RedBooklet' do
 
   # Pods for RedBooklet
   pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'CHTCollectionViewWaterfallLayout'
+  pod 'YPImagePicker'
+  pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'SKPhotoBrowser'
 
 end

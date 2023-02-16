@@ -1,0 +1,18 @@
+
+/* Class = "UITabBarItem"; title = "Message"; ObjectID = "JA6-26-njU"; */
+"JA6-26-njU.title" = "Message";
+
+/* Class = "UITabBarItem"; title = "Shopping"; ObjectID = "Jqu-PI-bL0"; */
+"Jqu-PI-bL0.title" = "Shopping";
+
+/* Class = "UITabBarItem"; title = "Post"; ObjectID = "P5R-5Q-ltM"; */
+"P5R-5Q-ltM.title" = "Post";
+
+/* Class = "UITabBarItem"; title = "Me"; ObjectID = "V1R-Et-F8S"; */
+"V1R-Et-F8S.title" = "Me";
+
+/* Class = "UILabel"; text = "FollowVC"; ObjectID = "kPQ-IZ-s4o"; */
+"kPQ-IZ-s4o.text" = "FollowVC";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "lA1-IH-ofa"; */
+"lA1-IH-ofa.title" = "Home";

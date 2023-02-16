@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>打開後可以儲存照片和影片</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>打開後可錄製影片聲音</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>打開後可以選擇照片和影片</string>
+	<key>NSCameraUsageDescription</key>
+	<string>打開後可以拍攝照片和錄影</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
