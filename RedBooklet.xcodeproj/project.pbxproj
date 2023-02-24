@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6400A6B229A2848C00D66B56 /* NoteEditVC-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6400A6B129A2848C00D66B56 /* NoteEditVC-Helper.swift */; };
 		641120122962FBAD00F5C8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641120112962FBAD00F5C8FA /* AppDelegate.swift */; };
 		641120142962FBAD00F5C8FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641120132962FBAD00F5C8FA /* SceneDelegate.swift */; };
 		641120162962FBAD00F5C8FA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641120152962FBAD00F5C8FA /* HomeVC.swift */; };
@@ -16,14 +17,18 @@
 		641120212962FBAF00F5C8FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6411201F2962FBAF00F5C8FA /* LaunchScreen.storyboard */; };
 		641DB574299541CA00FDA4B4 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DB573299541CA00FDA4B4 /* PhotoCell.swift */; };
 		641E0043296880340080BF77 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 641E0042296880340080BF77 /* README.md */; };
+		64240F6D29A9184000AC4DAD /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64240F6C29A9184000AC4DAD /* Protocols.swift */; };
 		642774C1296F3102002A40C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642774C0296F3102002A40C2 /* Extensions.swift */; };
+		642AE29229A7C7A90052FEB6 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642AE29129A7C7A90052FEB6 /* ChannelVC.swift */; };
+		642AE29429A7C8950052FEB6 /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642AE29329A7C8950052FEB6 /* ChannelTableVC.swift */; };
 		6433D49D29993093004EAB40 /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6433D49C29993093004EAB40 /* PhotoFooter.swift */; };
-		6438EAC4299D4017001AB400 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6438EAC3299D4017001AB400 /* testVideo.mp4 */; };
 		643F609C2993E934006B69A4 /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F609B2993E934006B69A4 /* NoteEditVC.swift */; };
 		646E3934296DA7B4004095A5 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E3933296DA7B4004095A5 /* PostVC.swift */; };
 		6474B8862971B9AA0007A428 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6474B8852971B9AA0007A428 /* InfoPlist.strings */; };
 		6479B05B296F292400AA204D /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6479B05D296F292400AA204D /* localizable.strings */; };
 		64B51107296C862600558236 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B51106296C862600558236 /* TabBarController.swift */; };
+		64D1894329A3D7620096C500 /* TextViewInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1894229A3D7620096C500 /* TextViewInputAccessoryView.xib */; };
+		64D1894529A3D7AB0096C500 /* TextViewInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D1894429A3D7AB0096C500 /* TextViewInputAccessoryView.swift */; };
 		64DD8308296712B0009C2072 /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DD8307296712B0009C2072 /* WaterfallVC.swift */; };
 		64DD830A29672774009C2072 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DD830929672774009C2072 /* WaterfallCell.swift */; };
 		64DE40102965DC6E00F5EE0A /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DE400F2965DC6E00F5EE0A /* FollowVC.swift */; };
@@ -36,6 +41,7 @@
 /* Begin PBXFileReference section */
 		01497E796E29C10B8CC8DC06 /* Pods-RedBooklet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedBooklet.release.xcconfig"; path = "Target Support Files/Pods-RedBooklet/Pods-RedBooklet.release.xcconfig"; sourceTree = "<group>"; };
 		4382D15C78F47C64005718A1 /* Pods_RedBooklet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedBooklet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6400A6B129A2848C00D66B56 /* NoteEditVC-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Helper.swift"; sourceTree = "<group>"; };
 		6411200E2962FBAD00F5C8FA /* RedBooklet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBooklet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641120112962FBAD00F5C8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		641120132962FBAD00F5C8FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,9 +56,11 @@
 		641E0045296883A70080BF77 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		641E0047296883CD0080BF77 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		641E0049296885C10080BF77 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		64240F6C29A9184000AC4DAD /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		642774C0296F3102002A40C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		642AE29129A7C7A90052FEB6 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		642AE29329A7C8950052FEB6 /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		6433D49C29993093004EAB40 /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
-		6438EAC3299D4017001AB400 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = testVideo.mp4; path = ../../../../../../Users/luoguanyu/Downloads/testVideo.mp4; sourceTree = "<group>"; };
 		643F609B2993E934006B69A4 /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
 		646E3933296DA7B4004095A5 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		6474B8852971B9AA0007A428 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -61,6 +69,8 @@
 		6479B05F296F293100AA204D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/localizable.strings"; sourceTree = "<group>"; };
 		64B51106296C862600558236 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		64B7D056296886000011A9E4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		64D1894229A3D7620096C500 /* TextViewInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewInputAccessoryView.xib; sourceTree = "<group>"; };
+		64D1894429A3D7AB0096C500 /* TextViewInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewInputAccessoryView.swift; sourceTree = "<group>"; };
 		64DBB191299BDEA500DEF682 /* RedBooklet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedBooklet-Bridging-Header.h"; sourceTree = "<group>"; };
 		64DD8307296712B0009C2072 /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		64DD830929672774009C2072 /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
@@ -133,7 +143,6 @@
 				6479B058296F286E00AA204D /* Resource */,
 				64CCEA83298AB86500D3BBED /* Demo+Placeholder */,
 				6411201D2962FBAF00F5C8FA /* Assets.xcassets */,
-				6438EAC3299D4017001AB400 /* testVideo.mp4 */,
 				6411201F2962FBAF00F5C8FA /* LaunchScreen.storyboard */,
 				641120222962FBAF00F5C8FA /* Info.plist */,
 				6411201A2962FBAD00F5C8FA /* RedBooklet.xcdatamodeld */,
@@ -156,6 +165,7 @@
 			children = (
 				64DE40172965DEC000F5EE0A /* Constants.swift */,
 				642774C0296F3102002A40C2 /* Extensions.swift */,
+				64240F6C29A9184000AC4DAD /* Protocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -164,8 +174,13 @@
 			isa = PBXGroup;
 			children = (
 				643F609B2993E934006B69A4 /* NoteEditVC.swift */,
+				6400A6B129A2848C00D66B56 /* NoteEditVC-Helper.swift */,
 				641DB573299541CA00FDA4B4 /* PhotoCell.swift */,
 				6433D49C29993093004EAB40 /* PhotoFooter.swift */,
+				64D1894429A3D7AB0096C500 /* TextViewInputAccessoryView.swift */,
+				64D1894229A3D7620096C500 /* TextViewInputAccessoryView.xib */,
+				642AE29129A7C7A90052FEB6 /* ChannelVC.swift */,
+				642AE29329A7C8950052FEB6 /* ChannelTableVC.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -262,9 +277,9 @@
 				641120212962FBAF00F5C8FA /* LaunchScreen.storyboard in Resources */,
 				6474B8862971B9AA0007A428 /* InfoPlist.strings in Resources */,
 				6479B05B296F292400AA204D /* localizable.strings in Resources */,
-				6438EAC4299D4017001AB400 /* testVideo.mp4 in Resources */,
 				6411201E2962FBAF00F5C8FA /* Assets.xcassets in Resources */,
 				641E0043296880340080BF77 /* README.md in Resources */,
+				64D1894329A3D7620096C500 /* TextViewInputAccessoryView.xib in Resources */,
 				641120192962FBAD00F5C8FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,12 +333,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D1894529A3D7AB0096C500 /* TextViewInputAccessoryView.swift in Sources */,
 				64DE40162965DCBC00F5EE0A /* NearByVC.swift in Sources */,
 				641DB574299541CA00FDA4B4 /* PhotoCell.swift in Sources */,
+				6400A6B229A2848C00D66B56 /* NoteEditVC-Helper.swift in Sources */,
 				64DD8308296712B0009C2072 /* WaterfallVC.swift in Sources */,
+				642AE29429A7C8950052FEB6 /* ChannelTableVC.swift in Sources */,
 				64B51107296C862600558236 /* TabBarController.swift in Sources */,
 				64DD830A29672774009C2072 /* WaterfallCell.swift in Sources */,
 				6433D49D29993093004EAB40 /* PhotoFooter.swift in Sources */,
+				64240F6D29A9184000AC4DAD /* Protocols.swift in Sources */,
+				642AE29229A7C7A90052FEB6 /* ChannelVC.swift in Sources */,
 				643F609C2993E934006B69A4 /* NoteEditVC.swift in Sources */,
 				641120162962FBAD00F5C8FA /* HomeVC.swift in Sources */,
 				641120122962FBAD00F5C8FA /* AppDelegate.swift in Sources */,

@@ -11,5 +11,6 @@ target 'RedBooklet' do
   pod 'YPImagePicker'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'SKPhotoBrowser'
+  pod 'KMPlaceholderTextView', '~> 1.4.0'
 
 end

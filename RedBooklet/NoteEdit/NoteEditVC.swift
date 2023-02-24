@@ -17,22 +17,106 @@ class NoteEditVC: UIViewController {
 //    var videoURL: URL = Bundle.main.url(forResource: "testVideo", withExtension: "mp4")!
     var videoURL: URL?
     
+    var channel = ""
+    var subChannel = ""
+    var poiName = ""
+    
     var photosCount: Int { photos.count }
     var isVideo: Bool { videoURL != nil }
-
+    var textViewInputAccessoryView: TextViewInputAccessoryView { textView.inputAccessoryView as! TextViewInputAccessoryView }
+    
     @IBOutlet weak var photoCollectionView: UICollectionView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var titleCountLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var channelIcon: UIImageView!
+    @IBOutlet weak var channelLabel: UILabel!
+    @IBOutlet weak var channelPlaceholderLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configUI()
+    }
+    
+    private func configUI() {
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         photoCollectionView.dragDelegate = self
         photoCollectionView.dropDelegate = self
         
+        textView.delegate = self
+        
+        textView.smartInsertDeleteType = .no
         photoCollectionView.dragInteractionEnabled = true // 開啟拖放功能
-    }
+        hideKeyboardWhenTappedAround()
+        titleCountLabel.text = "\(kMaxNoteTitleCount)"
+        
+        let padding = textView.textContainer.lineFragmentPadding // 去除左右的縮進（默認是5，-5是為了消除placeholder左右間距)
+        // 去除上下的間距（上下默認是8，左右默認是5）
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: -padding, bottom: 0, right: -padding)
+        
+        // 行間距
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+        let typingAttributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .font: UIFont.systemFont(ofSize: 14),
+            .foregroundColor: UIColor.secondaryLabel
+        ]
+        textView.typingAttributes = typingAttributes
+        // 光標顏色
+        textView.tintColorDidChange()
+        // 鍵盤上的view
 
+        textView.inputAccessoryView = Bundle.loadView(fromNib: "TextViewInputAccessoryView", with: TextViewInputAccessoryView.self)
+        textViewInputAccessoryView.downButton.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
+        textViewInputAccessoryView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let channelVC = segue.destination as? ChannelVC{
+            view.endEditing(true)
+            channelVC.PVDelegate = self
+        }
+    }
+    
+    // 收鍵盤
+    @objc private func resignTextView(){
+        textView.resignFirstResponder()
+    }
+    
+    @IBAction func titleTextFieldEditingBegin(_ sender: UITextField) {
+        titleCountLabel.isHidden = false
+    }
+    
+    @IBAction func titleTextFieldEditingEnd(_ sender: UITextField) {
+        titleCountLabel.isHidden = true
+    }
+    
+    @IBAction func titleTextFieldEditingChanged(_ sender: UITextField) {
+        handleTFEditChanged()
+    }
+    
+}
+
+// MARK: - UITextViewDelegate
+extension NoteEditVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        guard textView.markedTextRange == nil else { return } // 如果有高亮字符時return
+        textViewInputAccessoryView.currentTextCount = textView.text.count
+    }
+}
+
+// MARK: - ChannelVCDelegate
+extension NoteEditVC: ChannelVCDelegate{
+    func updateChannel(channel: String, subChannel: String) {
+        // 數據
+        self.channel = channel
+        self.subChannel = subChannel
+        // UI
+        updateChannelUI()
+    }
 }
 
 extension NoteEditVC: UICollectionViewDataSource {
@@ -131,7 +215,7 @@ extension NoteEditVC {
             present(picker, animated: true, completion: nil)
         } else {
             
-            showTextHub("最多只能選擇\(kMaxPhotoCount)張照片")
+            showTextHUD("最多只能選擇\(kMaxPhotoCount)張照片")
         }
     }
 }
@@ -183,3 +267,32 @@ extension NoteEditVC: UICollectionViewDropDelegate {
         
     }
 }
+
+// 編輯草稿筆記/筆記的處理
+extension NoteEditVC{
+    func updateChannelUI(){
+        channelIcon.tintColor = blueColor
+        channelLabel.text = subChannel
+        channelLabel.textColor = blueColor
+        channelPlaceholderLabel.isHidden = true
+    }
+}
+
+//extension NoteEditVC: UITextFieldDelegate {
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        // 輸入字符之前產生變化
+//        // 限制輸入或複製貼上字數總合不超過20個字
+//        let isExceed = range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount
+//
+//        if isExceed {
+//            showTextHUD("標題最多可輸入\(kMaxNoteTitleCount)個字")
+//        }
+//
+//        return !isExceed
+//    }
+//}
